@@ -7,15 +7,11 @@ import matter from 'gray-matter'
 export default function Home({ posts }) {
   return (
     <div>
-      <h1>Paolo's Blog</h1>
-      <ul>
-        {posts.map((post, index) => (
-          <li>
+      <h1>Paolos Blog</h1>
+        { posts.map((post, index) => (
             <Link href={'/blog/' + post.route} passHref key={index}>
-            { post.frontMatter.title }</Link>
-          </li>
+            <a>{ post.frontMatter.title }</a></Link>
         ))}
-      </ul>
     </div>
    
   )
