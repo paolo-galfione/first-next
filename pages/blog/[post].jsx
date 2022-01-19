@@ -4,11 +4,11 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Button from '../../components/button'
-import SyntaxHighlighter from 'react-syntax-highlighter'
+import CodeView from '../../components/code-view'
 
 // import { Nav, Button } from '../../components'
 //const components = { Nav, Button, SyntaxHighlighter }
-const components = { Button, SyntaxHighlighter }
+const components = { Button, CodeView }
 
 const PostPage = ({ frontMatter: { title, date }, mdxSource }) => {
   return (
