@@ -1,0 +1,31 @@
+---
+title: Event Modeling
+date: '2022-01-05'
+---
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+## la legge di Moore
+I sistemi _informativi digitalizzati_ sono un concetto relativamente nuovo. Gli esseri umani lavorano con i sistemi informativi da migliaia di anni. Nel corso dei secoli le banche, le compagnie assicurative e molte altre organizzazioni su larga scala sono riuscite ad avere successo.
+Con l'avvento del transistor, la velocità e la precisione dell'elaborazione delle informazioni sono aumentate di ordini di grandezza. Ciò che non ha ottenuto lo stesso salto di qualità è l'archiviazione digitale. Questo squilibrio ha causato l'ottimizzazione dei sistemi informativi per una quantità molto ridotta di informazioni online. Puoi vederlo nell'avvento della tecnologia RDBMS. Ciò significa che il compromesso è stato quello di buttare via le informazioni.
+## Memoria umana
+La narrazione è qualcosa che consente agli esseri umani di trasmettere la conoscenza alle generazioni successive e si basa molto sul modo in cui immagazziniamo i ricordi, siano essi logici, visivi, uditivi o altro. Questo è importante perché c'è un parallelo con il modo in cui sono stati costruiti i sistemi informativi. C'è una "memoria" di tutte le tue visite dal dottore. È il registro dei moduli che vengono compilati ad ogni visita.
+Le specifiche per esempio sono un modo per mostrare come dovrebbe funzionare qualcosa. Questo può essere visto in pratiche di successo in software come lo sviluppo guidato dal comportamento. Funziona bene perché comunichiamo attraverso le storie in modo più efficace. Si ricollega alla narrazione come un modo per mantenere le informazioni nella società. I nostri cervelli sono costruiti per questo più di quanto non siano costruiti per diagrammi di flusso e altri formati.
+
+<SyntaxHighlighter language="javascript" showLineNumbers style="dark">
+  {`
+export default function Home({ posts }) {
+  return (
+    <div>
+      <h1>Paolo's Blog</h1>
+      <ul>
+        {posts.map((post, index) => (
+          <li>
+            <Link href={'/blog/' + post.route} passHref key={index}>
+            { post.frontMatter.title }</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+  `}
+</SyntaxHighlighter>
